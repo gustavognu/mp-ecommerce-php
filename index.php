@@ -55,7 +55,7 @@
                                     <img src="./assets/music-audio-alp-201709" alt="" width="1440" height="320" data-scale-params-2="wid=2880&amp;hei=640&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1503948581306" class="pd-billboard-hero ir">
                                 </div>
                                 <div class="pd-billboard-info">
-                                    <h1 class="pd-billboard-header pd-util-compact-small-18">Tienda e-commerce...</h1>
+                                    <h1 class="pd-billboard-header pd-util-compact-small-18">Tienda e-commerce</h1>
                                 </div>
                             </div>
                         </div>
@@ -257,7 +257,7 @@
                                                 $15.000
                                             </div>
                                         </div>
-                                        <form action="/detail.php" method="get">
+                                        <form action="detail.php" method="get">
                                             <input type="hidden" name="img" value="./assets/samsung-galaxy-s9-xxl.jpg">
                                             <input type="hidden" name="title" value="Samsung Galaxy S9">
                                             <input type="hidden" name="price" value="15000">
@@ -312,7 +312,7 @@
                                                 $10.000
                                             </div>
                                         </div>
-                                        <form action="/detail.php" method="get">
+                                        <form action="detail.php" method="get">
                                             <input type="hidden" name="img" value="./assets/l6g6.jpg">
                                             <input type="hidden" name="title" value="LG G6">
                                             <input type="hidden" name="price" value="10000">
@@ -370,7 +370,7 @@
                                                 </span>
                                             </div>
                                         </div>
-                                        <form action="/detail.php" method="get">
+                                        <form action="detail.php" method="get">
                                             <input type="hidden" name="img" value="./assets/u_10168742.jpg">
                                             <input type="hidden" name="title" value="iPhone 8">
                                             <input type="hidden" name="price" value="16000">
@@ -427,7 +427,7 @@
                                                 </span>
                                             </div>
                                         </div>
-                                        <form action="/detail.php" method="get">
+                                        <form action="detail.php" method="get">
                                             <input type="hidden" name="img" value="./assets/motorola-moto-g5-plus-1.jpg">
                                             <input type="hidden" name="title" value="Motorola G5">
                                             <input type="hidden" name="price" value="9000">
@@ -477,7 +477,7 @@
                                                 $8.000
                                             </div>
                                         </div>
-                                        <form action="/detail.php" method="get">
+                                        <form action="detail.php" method="get">
                                             <input type="hidden" name="img" value="./assets/motorola-moto-g4-3.jpg">
                                             <input type="hidden" name="title" value="Moto G4">
                                             <input type="hidden" name="price" value="8000">
@@ -528,7 +528,7 @@
                                                 </span>
                                             </div>
                                         </div>
-                                        <form action="/detail.php" method="get">
+                                        <form action="detail.php" method="get">
                                             <input type="hidden" name="img" value="./assets/003.jpg">
                                             <input type="hidden" name="title" value="Sony Xperia XZ2">
                                             <input type="hidden" name="price" value="10000">
