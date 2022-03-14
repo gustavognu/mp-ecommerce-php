@@ -1,8 +1,6 @@
 <?php
-echo '----<br><pre>';
-
 
 $body = @file_get_contents('php://input');
 $data = json_decode($body, true);
 
-print_r($data);
+file_put_contents("eventos.json", json_encode($data));
