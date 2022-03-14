@@ -1,2 +1,4 @@
 <?php
-echo 1;
+echo '----<br><pre>';
+
+print_r($_REQUEST);
