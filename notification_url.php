@@ -1,5 +1,5 @@
 <?php
 
-$body = @file_get_contents('php://input');
+// $body = @file_get_contents('php://input');
 
-file_put_contents("eventos.json", $body);
+file_put_contents("eventos.json", $_REQUEST);
