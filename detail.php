@@ -1,8 +1,6 @@
 <?php
 
     $access_token_url = 'https://api.mercadopago.com/oauth/token';
-
-
     $query = array( "client_id"     => '5427238671671770',
                     "client_secret" => '4PMGuFmXySAgXZ2EWoRkndrXCaPaLNz8',
                     "grant_type"    => "refresh_token",
@@ -72,9 +70,6 @@
             "expires": true
             }';
 
-
-
-
     $url= 'https://api.mercadopago.com/checkout/preferences';
     $ch = curl_init($url);
 
@@ -90,21 +85,15 @@
     $result = curl_exec($ch);
     $result = json_decode($result, true);
     $init_point= trim($result['init_point']);
-
-    // print_r($result);
-    // return;
-
-
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+
     <meta name="viewport" content="width=1024">
     <title>Tienda e-commerce</title>
+
+    <script src="https://sdk.mercadopago.com/js/v2" view="item"></script>
 
     <?php
         $url_pagar= 'https://auth.mercadopago.com/authorization?client_id=5427238671671770&response_type=code&platform_id=mp&state='.rand(0,5000).'&redirect_uri=https://shrouded-retreat-14532.herokuapp.com/';
@@ -115,8 +104,6 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
-
-
 
     <link rel="stylesheet" href="./assets/category-landing.css" media="screen, print">
 
@@ -144,9 +131,6 @@
         }
     </style>
     <style type="text/css"> @keyframes loading-rotate { 100% { transform: rotate(360deg); } } @keyframes loading-dash { 0% { stroke-dasharray: 1, 200; stroke-dashoffset: 0; } 50% { stroke-dasharray: 100, 200; stroke-dashoffset: -20px; } 100% { stroke-dasharray: 89, 200; stroke-dashoffset: -124px; } } @keyframes loading-fade-in { from { opacity: 0; } to { opacity: 1; } } .mp-spinner { position: absolute; top: 100px; left: 50%; font-size: 70px; margin-left: -35px; animation: loading-rotate 2.5s linear infinite; transform-origin: center center; width: 1em; height: 1em; } .mp-spinner-path { stroke-dasharray: 1, 200; stroke-dashoffset: 0; animation: loading-dash 1.5s ease-in-out infinite; stroke-linecap: round; stroke-width: 2px; stroke: #009ee3; } </style><style type="text/css"> .mercadopago-button { padding: 0 1.7142857142857142em; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 0.875em; line-height: 2.7142857142857144; background: #009ee3; border-radius: 0.2857142857142857em; color: #fff; cursor: pointer; border: 0; } </style><style type="text/css"> @keyframes loading-rotate { 100% { transform: rotate(360deg); } } @keyframes loading-dash { 0% { stroke-dasharray: 1, 200; stroke-dashoffset: 0; } 50% { stroke-dasharray: 100, 200; stroke-dashoffset: -20px; } 100% { stroke-dasharray: 89, 200; stroke-dashoffset: -124px; } } @keyframes loading-fade-in { from { opacity: 0; } to { opacity: 1; } } .mp-spinner { position: absolute; top: 100px; left: 50%; font-size: 70px; margin-left: -35px; animation: loading-rotate 2.5s linear infinite; transform-origin: center center; width: 1em; height: 1em; } .mp-spinner-path { stroke-dasharray: 1, 200; stroke-dashoffset: 0; animation: loading-dash 1.5s ease-in-out infinite; stroke-linecap: round; stroke-width: 2px; stroke: #009ee3; } </style><style type="text/css"> .mercadopago-button { padding: 0 1.7142857142857142em; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 0.875em; line-height: 2.7142857142857144; background: #009ee3; border-radius: 0.2857142857142857em; color: #fff; cursor: pointer; border: 0; } </style><style type="text/css"> @keyframes loading-rotate { 100% { transform: rotate(360deg); } } @keyframes loading-dash { 0% { stroke-dasharray: 1, 200; stroke-dashoffset: 0; } 50% { stroke-dasharray: 100, 200; stroke-dashoffset: -20px; } 100% { stroke-dasharray: 89, 200; stroke-dashoffset: -124px; } } @keyframes loading-fade-in { from { opacity: 0; } to { opacity: 1; } } .mp-spinner { position: absolute; top: 100px; left: 50%; font-size: 70px; margin-left: -35px; animation: loading-rotate 2.5s linear infinite; transform-origin: center center; width: 1em; height: 1em; } .mp-spinner-path { stroke-dasharray: 1, 200; stroke-dashoffset: 0; animation: loading-dash 1.5s ease-in-out infinite; stroke-linecap: round; stroke-width: 2px; stroke: #009ee3; } </style><style type="text/css"> .mercadopago-button { padding: 0 1.7142857142857142em; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 0.875em; line-height: 2.7142857142857144; background: #009ee3; border-radius: 0.2857142857142857em; color: #fff; cursor: pointer; border: 0; } </style><style type="text/css"> @keyframes loading-rotate { 100% { transform: rotate(360deg); } } @keyframes loading-dash { 0% { stroke-dasharray: 1, 200; stroke-dashoffset: 0; } 50% { stroke-dasharray: 100, 200; stroke-dashoffset: -20px; } 100% { stroke-dasharray: 89, 200; stroke-dashoffset: -124px; } } @keyframes loading-fade-in { from { opacity: 0; } to { opacity: 1; } } .mp-spinner { position: absolute; top: 100px; left: 50%; font-size: 70px; margin-left: -35px; animation: loading-rotate 2.5s linear infinite; transform-origin: center center; width: 1em; height: 1em; } .mp-spinner-path { stroke-dasharray: 1, 200; stroke-dashoffset: 0; animation: loading-dash 1.5s ease-in-out infinite; stroke-linecap: round; stroke-width: 2px; stroke: #009ee3; } </style><style type="text/css"> .mercadopago-button { padding: 0 1.7142857142857142em; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 0.875em; line-height: 2.7142857142857144; background: #009ee3; border-radius: 0.2857142857142857em; color: #fff; cursor: pointer; border: 0; } </style><style type="text/css"> @keyframes loading-rotate { 100% { transform: rotate(360deg); } } @keyframes loading-dash { 0% { stroke-dasharray: 1, 200; stroke-dashoffset: 0; } 50% { stroke-dasharray: 100, 200; stroke-dashoffset: -20px; } 100% { stroke-dasharray: 89, 200; stroke-dashoffset: -124px; } } @keyframes loading-fade-in { from { opacity: 0; } to { opacity: 1; } } .mp-spinner { position: absolute; top: 100px; left: 50%; font-size: 70px; margin-left: -35px; animation: loading-rotate 2.5s linear infinite; transform-origin: center center; width: 1em; height: 1em; } .mp-spinner-path { stroke-dasharray: 1, 200; stroke-dashoffset: 0; animation: loading-dash 1.5s ease-in-out infinite; stroke-linecap: round; stroke-width: 2px; stroke: #009ee3; } </style><style type="text/css"> .mercadopago-button { padding: 0 1.7142857142857142em; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 0.875em; line-height: 2.7142857142857144; background: #009ee3; border-radius: 0.2857142857142857em; color: #fff; cursor: pointer; border: 0; } </style><style type="text/css"> @keyframes loading-rotate { 100% { transform: rotate(360deg); } } @keyframes loading-dash { 0% { stroke-dasharray: 1, 200; stroke-dashoffset: 0; } 50% { stroke-dasharray: 100, 200; stroke-dashoffset: -20px; } 100% { stroke-dasharray: 89, 200; stroke-dashoffset: -124px; } } @keyframes loading-fade-in { from { opacity: 0; } to { opacity: 1; } } .mp-spinner { position: absolute; top: 100px; left: 50%; font-size: 70px; margin-left: -35px; animation: loading-rotate 2.5s linear infinite; transform-origin: center center; width: 1em; height: 1em; } .mp-spinner-path { stroke-dasharray: 1, 200; stroke-dashoffset: 0; animation: loading-dash 1.5s ease-in-out infinite; stroke-linecap: round; stroke-width: 2px; stroke: #009ee3; } </style><style type="text/css"> .mercadopago-button { padding: 0 1.7142857142857142em; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 0.875em; line-height: 2.7142857142857144; background: #009ee3; border-radius: 0.2857142857142857em; color: #fff; cursor: pointer; border: 0; } </style></head>
-
-
-
 <body class="as-theme-light-heroimage">
     <div class="stack">
         <div class="as-search-wrapper" role="main">
@@ -203,24 +187,22 @@
                                     </div>
                                 </div>
                                 <div class="as-producttile-info" style="float:left;min-height: 168px;">
-                                    <!-- <form action="https://auth.mercadopago.com/authorization?client_id=5427238671671770&response_type=code&platform_id=mp&state=<?php echo rand(0,5000); ?>&redirect_uri=https://shrouded-retreat-14532.herokuapp.com/"> -->
-                                        <div class="as-producttile-titlepricewraper" style="min-height: 128px;">
-                                            <div class="as-producttile-title">
-                                                <h3 class="as-producttile-name">
-                                                    <p class="as-producttile-tilelink">
-                                                        <span data-ase-truncate="2"><?php echo $_POST['title'] ?></span>
-                                                    </p>
-                                                </h3>
-                                            </div>
-                                            <h3 >
-                                                <?php echo $_POST['price'] ?>
-                                            </h3>
-                                            <h3 >
-                                                <?php echo "$" . $_POST['unit'] ?>
+                                    <div class="as-producttile-titlepricewraper" style="min-height: 128px;">
+                                        <div class="as-producttile-title">
+                                            <h3 class="as-producttile-name">
+                                                <p class="as-producttile-tilelink">
+                                                    <span data-ase-truncate="2"><?php echo $_POST['title'] ?></span>
+                                                </p>
                                             </h3>
                                         </div>
-                                        <button type="submit" class="mercadopago-button" >Pagar</button>
-                                    <!-- </form> -->
+                                        <h3 >
+                                            <?php echo $_POST['price'] ?>
+                                        </h3>
+                                        <h3 >
+                                            <?php echo "$" . $_POST['unit'] ?>
+                                        </h3>
+                                    </div>
+                                    <button type="submit" class="mercadopago-button" >Pagar</button>
                                 </div>
                             </div>
                         </div>
@@ -244,7 +226,6 @@
         window.location= "<?php echo $init_point; ?>";
     });
 
-    // console.log("<?php echo $init_point; ?>");
 </script>
 
 </html>
