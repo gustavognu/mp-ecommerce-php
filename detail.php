@@ -83,6 +83,7 @@
     curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $result = curl_exec($ch);
+    file_put_contents("preferences.json", $result);
     $result = json_decode($result, true);
     $init_point= trim($result['init_point']);
 ?>
