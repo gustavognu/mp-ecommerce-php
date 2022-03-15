@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=1024">
     <title>Pago exitoso</title>
 
-    <script src="https://sdk.mercadopago.com/js/v2" view="failure"></script>
+    <script src="https://sdk.mercadopago.com/js/v2" view="success"></script>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="format-detection" content="telephone=no">
