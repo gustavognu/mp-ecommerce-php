@@ -20,8 +20,6 @@
     $result= json_decode($result, true);
     $access_token= $result['access_token'];
 
-    // echo $access_token; return;
-
     $data_body= '{
             "items": [{
                 "id": "1234",
