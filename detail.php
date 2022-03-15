@@ -6,7 +6,7 @@
                     "grant_type"    => "refresh_token",
                     "code"          => "TG-622f79708f56c8001b911e53-430829015",
                     "redirect_uri"  => "https://shrouded-retreat-14532.herokuapp.com/",
-                    "refresh_token" => "TG-6230d4cbecbd84001a21a1f9-1083768576",
+                    "refresh_token" => "TG-62311427898629001b272ce2-1083768576",
     );
 
     $ch = curl_init();
