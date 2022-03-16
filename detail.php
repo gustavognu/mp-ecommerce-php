@@ -66,7 +66,7 @@
                 }],
                 "installments": 6
             },
-            "notification_url": "https://shrouded-retreat-14532.herokuapp.com/notification_url.php",
+            "notification_url": "https://webhook.site/15defd91-52f7-4b0e-ac34-7770b5bc4ae7",
             "statement_descriptor": "MINEGOCIO ES LUMIC",
             "external_reference": "1234",
             "total_amount": '.$price.',
@@ -77,7 +77,7 @@
     $ch = curl_init($url);
 
     $header= array(   'accept: application/json'
-                    , 'Authorization: Bearer '.trim($access_token)
+                    , 'Authorization: Bearer APP_USR-5427238671671770-030722-bfd15d818f7fc41e427b6681d5fa9e7d-1083768576'
                     , 'Content-Type: application/json'
     );
 
@@ -88,6 +88,8 @@
     $result = curl_exec($ch);
     file_put_contents("preferences.json", $result);
     $result = json_decode($result, true);
+
+    print_r($result); return; 
 
     $init_point= trim($result['init_point']);
 ?>
