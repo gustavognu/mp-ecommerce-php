@@ -68,6 +68,7 @@
             },
             "notification_url": "https://shrouded-retreat-14532.herokuapp.com/notification_url.php",
             "statement_descriptor": "MINEGOCIO ES LUMIC",
+            "external_reference": "1234",
             "expires": true
             }';
 
