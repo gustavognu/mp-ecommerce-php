@@ -20,7 +20,6 @@
     $result= json_decode($result, true);
     $access_token= $result['access_token'];
 
-
     $price= isset($_POST['price']) && !empty($_POST['price']) ? $_POST['price'] : "800";
 
     $data_body= '{
@@ -87,10 +86,6 @@
     $result = curl_exec($ch);
     file_put_contents("preferences.json", $result);
     $result = json_decode($result, true);
-
-
-    print_r($result); return;
-
 
     $init_point= trim($result['init_point']);
 ?>
