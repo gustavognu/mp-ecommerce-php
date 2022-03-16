@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=1024">
     <title>Pago pendiente</title>
 
-    <script src="https://sdk.mercadopago.com/js/v2" view="pendiente"></script>
+    <script src="https://www.mercadopago.com/v2/security.js" view="pendiente"></script>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="format-detection" content="telephone=no">

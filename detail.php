@@ -20,6 +20,9 @@
     $result= json_decode($result, true);
     $access_token= $result['access_token'];
 
+
+    $price= isset($_POST['price']) && !empty($_POST['price']) ? $_POST['price'] : "800";
+
     $data_body= '{
             "items": [{
                 "id": "1234",
@@ -29,7 +32,7 @@
                 "description": "Dispositivo móvil de Tienda e-commerce",
                 "category_id": "art",
                 "quantity": 1,
-                "unit_price": 75.76
+                "unit_price": '. $price .'
             }],
             "payer": {
                 "name": "Lalo",
@@ -66,7 +69,6 @@
             },
             "notification_url": "https://shrouded-retreat-14532.herokuapp.com/notification_url.php",
             "statement_descriptor": "MINEGOCIO ES LUMIC",
-            "external_reference": "Reference_1234",
             "expires": true
             }';
 
@@ -85,6 +87,11 @@
     $result = curl_exec($ch);
     file_put_contents("preferences.json", $result);
     $result = json_decode($result, true);
+
+
+    print_r($result); return;
+
+
     $init_point= trim($result['init_point']);
 ?>
 
