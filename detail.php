@@ -89,8 +89,6 @@
     file_put_contents("preferences.json", $result);
     $result = json_decode($result, true);
 
-    print_r($result); return; 
-
     $init_point= trim($result['init_point']);
 ?>
 
